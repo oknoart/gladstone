@@ -16,10 +16,11 @@
     <a class="btn" href="mailto:parkingconsultation@somerset.gov.uk?cc=nick.odonnell@somerset.gov.uk&subject=URGENT:%20Road%20Safety%20Concern%20%E2%80%93%20Gladstone%20Street%20Junction&body=Dear%20Somerset%20Council%20Parking%20Services,%0A%0AI%20am%20a%20resident%20of%20Gladstone%20Street%20and%20I%20am%20writing%20to%20formally%20report%20a%20significant%20safety%20hazard%20at%20the%20junction%20following%20the%20recent%20removal%20of%20the%20double%20yellow%20lines.%0A%0AThe%20removal%20of%20these%20lines%20has%20resulted%20in%20cars%20parking%20right%20up%20to%20the%20junction.%20This%20has%20severely%20restricted%20visibility%20for%20drivers,%20cyclists,%20and%20pedestrians,%20making%20it%20dangerous%20to%20turn%20safely.%0A%0AUnder%20Section%201(a)%20of%20the%20Road%20Traffic%20Regulation%20Act%201984,%20the%20council%20has%20a%20statutory%20duty%20to%20manage%20the%20road%20for%20%22avoiding%20danger%20to%20persons%20or%20other%20traffic%22.%20The%20current%20situation%20is%20unsafe.%0A%0AI%20request%20that%20the%20council%20conducts%20an%20urgent%20safety%20review%20of%20this%20specific%20junction%20and%20reinstates%20the%20junction%20protection%20(double%20yellow%20lines)%20to%20ensure%20the%20safety%20of%20all%20road%20users.%0A%0AYours%20sincerely,">Click Here to Open Email</a>
 
     <script>
-        // Hit the counter API immediately on page load
-        fetch('https://api.countapi.xyz/hit/gladstone-street-parking/scans');
+        // Track the scan via a lightweight analytics pixel
+        const trackScan = new Image();
+        trackScan.src = 'https://tinylytics.app/track/gladstone_scans.png';
 
-        // Brief 400ms delay to ensure the fetch completes before the browser redirects
+        // Brief delay to ensure the image request leaves the browser before redirecting
         setTimeout(function() {
             window.location.href = document.querySelector('.btn').href;
         }, 400);
